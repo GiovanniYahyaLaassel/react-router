@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react"
 import { data } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 
 export default function Posts () {
@@ -28,6 +29,7 @@ export default function Posts () {
                 <li key={post.id}>
                     <h2>{post.title}</h2>
                     <p>{post.content.substring(0, 100)}...</p>
+                    <Link to={`/Posts/${post.id}`}>Leggi di più</Link>   
                 </li>
                 ))}
             </ul>

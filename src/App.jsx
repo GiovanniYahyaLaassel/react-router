@@ -4,6 +4,7 @@ import DefaultLayout from './layouts/DefaultLayout'
 import Home from './pages/Home'
 import About from './pages/About'
 import Posts from './pages/Posts'
+import PostDetails from './pages/PostDetails'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path='/' Component={Home}></Route>
             <Route path='/about' Component={About}></Route>
             <Route path='/posts' Component={Posts}></Route>
+            <Route path='/posts/:id' Component={PostDetails}></Route>
 
           </Route>
           
