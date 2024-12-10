@@ -2,7 +2,7 @@ import {  NavLink } from "react-router-dom";
 
 export default function Navbar () {
     return (
-        <nav>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <ul>
                 <li>
                     <NavLink to='/'>Home</NavLink>

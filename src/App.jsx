@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-// import Navbar from './layouts/Navbar'
+import Navbar from './layouts/Navbar'
 import DefaultLayout from './layouts/DefaultLayout'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -13,19 +13,22 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        
-        <Routes>
-          <Route Component={DefaultLayout}>
-            {/* rotta principale con layout in comune */}
+        {/* creo un contenitore generale */}
+        <div className='container'>
+          <Navbar/>
+          <Routes>
+            <Route Component={DefaultLayout}>
+              {/* rotta principale con layout in comune */}
 
-            <Route path='/' Component={Home}></Route>
-            <Route path='/about' Component={About}></Route>
-            <Route path='/posts' Component={Posts}></Route>
-            <Route path='/posts/:id' Component={PostDetails}></Route>
+              <Route path='/' Component={Home}></Route>
+              <Route path='/about' Component={About}></Route>
+              <Route path='/posts' Component={Posts}></Route>
+              <Route path='/posts/:id' Component={PostDetails}></Route>
 
-          </Route>
-          
-        </Routes>
+            </Route>
+            
+          </Routes>
+        </div>
 
       </BrowserRouter>
 
